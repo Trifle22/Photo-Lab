@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+  <script src="js/main.js" defer></script>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="img/logo.png">
+  <title>Photo Lab</title>
+</head>
+<body>
+  <header class="header">
+    <div class="header__center--top">
+      <div class="menu-btn">
+        <span></span>
+      </div>
+      <a href="#" class="logo">
+        photo
+        <img src="img/logo.png" alt="logo" class="logo-img">
+        lab
+      </a>
+      <nav class="header--nav">
+        <a href="#" class="header--nav--link">Главная</a>
+        <a href="#" class="header--nav--link">О нас</a>
+        <a href="#" class="header--nav--link">Обучение</a>
+        <a href="#" class="header--nav--link">Портфолио</a>
+        <a href="#" class="header--nav--link">Отзывы</a>
+        <a href="#" class="header--nav--link">Контакты</a>
+      </nav>
+      <div class="header__search--block">
+        <input type="text" class="search--block--input">
+        <img src="img/search.svg" alt="search" class="search--block--img">
+      </div>
+    </div>
+    <nav class="burger-menu">
+      <a href="#" class="header--nav--link">Главная</a>
+      <a href="#" class="header--nav--link">О нас</a>
+      <a href="#" class="header--nav--link">Обучение</a>
+      <a href="#" class="header--nav--link">Портфолио</a>
+      <a href="#" class="header--nav--link">Отзывы</a>
+      <a href="#" class="header--nav--link">Контакты</a>
+    </nav>
+    <div class="header__bottom">
+      <aside class="header__left">
+        <a href="#" class="header__left--link"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="header__left--link"><i class="fab fa-vk"></i></a>
+        <a href="#" class="header__left--link"><i class="fab fa-telegram-plane"></i></a>
+        <a href="#" class="header__left--link"><i class="fab fa-twitter"></i></a>
+      </aside>
+      <div class="header__center">
+        <div class="swiper-container">
+          <!-- Additional required wrapper -->
+            <div class="swiper-slide fade">
+              <h3 class="slide-subtitle">базовый курс</h3>
+              <h1 class="slide-title">Основы фотографии</h1>
+              <p class="slide-description">Курс «Основы фотографии» предназначен для тех, кто желает овладеть функционалом своего фотоаппарата, освоить принципы работы с цифровыми файлами, научиться качественно применять приёмы постобработки. </p>
+              <button>подробнее</button>
+            </div>
+            <div class="swiper-slide fade">
+              <h3 class="slide-subtitle">Lorem, ipsum.~</h3>
+              <h1 class="slide-title">Lorem, ipsum.</h1>
+              <p class="slide-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni delectus expedita saepe doloremque omnis. Nobis maiores voluptate veniam enim suscipit aut modi harum numquam quidem iusto, perferendis est tempore? Iste! </p>
+              <button>подробнее</button>
+            </div>
+            <div class="swiper-slide fade">
+              <h3 class="slide-subtitle">Lorem, ipsum.</h3>
+              <h1 class="slide-title">Lorem, ipsum.</h1>
+              <p class="slide-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas sed nisi aperiam facere ratione laudantium? </p>
+              <button>подробнее</button>
+            </div>
+            <div class="swiper-slide fade">
+              <h3 class="slide-subtitle">Lorem.</h3>
+              <h1 class="slide-title">Lorem, ipsum.</h1>
+              <p class="slide-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est omnis, fugit consectetur quis saepe quas corporis itaque nobis ex non. </p>
+              <button>подробнее</button>
+            </div>
+            <div class="swiper-slide fade">
+              <h3 class="slide-subtitle">Lorem ipsum dolor sit.</h3>
+              <h1 class="slide-title">Lorem, ipsum dolor.</h1>
+              <p class="slide-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo incidunt mollitia eveniet eum ut corrupti dolorum illo? Nobis iusto, quidem fugit ratione reiciendis maxime voluptatibus. </p>
+              <button>подробнее</button>
+            </div>
+        </div>
+      </div>  
+      <aside class="header__right">
+        <div class="pagination--button active" onclick="currentSlide(1)"></div>
+        <div class="pagination--button" onclick="currentSlide(2)"></div>
+        <div class="pagination--button" onclick="currentSlide(3)"></div>
+        <div class="pagination--button" onclick="currentSlide(4)"></div>
+        <div class="pagination--button" onclick="currentSlide(5)"></div>
+      </aside>
+    </div>
+  </header>
+
+</body>
+</html>
+
