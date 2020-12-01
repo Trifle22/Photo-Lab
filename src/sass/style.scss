@@ -394,6 +394,9 @@ $orange: rgb(228, 159, 72);
   }
 }
 @media (max-width: 992px) {
+  .logo {
+    margin-left: 50px;
+  }
   .menu-btn {
     display: flex;
     span {
@@ -404,17 +407,19 @@ $orange: rgb(228, 159, 72);
 
   .header__center--top {
     box-sizing: border-box;
-    max-width: 100%;
     width: 100%;
+    max-width: 100%;
+
     padding: 25px 0;
     padding-left: 20px;
-    padding-right: 20px;
     margin: 0;
+    padding-right: 20px;
     background-color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 99;
+    position: sticky;
   }
   .header--nav {
     display: none;
@@ -436,6 +441,7 @@ $orange: rgb(228, 159, 72);
   }
   .burger-menu {
     width: 100%;
+    max-width: 100%;
     background-color: black;
     display: flex;
     justify-content: space-between;
@@ -449,4 +455,50 @@ $orange: rgb(228, 159, 72);
       z-index: 99;
     }
   }
+}
+@media (max-width: 768px) {
+  .swiper-slide {
+    max-width: 100%;
+    h1 {
+      font-size: 50px;
+    }
+    p {
+      margin-bottom: 30px;
+    }
+    button {
+      padding: 15px 20px;
+    }
+  }
+}
+@media (max-width: 576px) {
+    .swiper-slide {
+    max-width: 100%;
+    h1 {
+      font-size: 40px;
+    }
+    p {
+      margin-bottom: 30px;
+    }
+    button {
+      padding: 15px 20px;
+    }
+  }
+  .burger-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 89px;
+  }
+  .header--nav--link {
+    max-width: 30%;
+  }
+}
+@media (max-width: 400px) {
+  .swiper-slide {
+    h1 {
+      font-size: 30px;
+      max-width: 100%;
+    }
+  }
+
 }
