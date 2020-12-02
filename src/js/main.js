@@ -3,6 +3,9 @@ let slideIndex = 1;
 const burgerButton = document.querySelector('.menu-btn');
 const burgerMenu = document.querySelector('.burger-menu');
 console.log(burgerMenu);
+const aboutUsText = document.querySelector('.about-us--text');
+const aboutUsImg = document.querySelector('.about-us--img');
+const aboutUsAdvantages = document.querySelector('.about-us--advantages');
 
 showSlides(slideIndex);
 
@@ -47,10 +50,17 @@ function showSlides(n) {
 burgerButton.addEventListener('click', function() {
   burgerButton.classList.toggle('active');
   burgerMenu.classList.toggle('active');
-})
+});
 
 
+  function adaptive() {
+    if (screen.width <= 992) {
+      aboutUsAdvantages.before(aboutUsImg);
+    } else {
+      ''
+    }
+  };
 
-
+  adaptive();
 
 
