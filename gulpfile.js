@@ -33,7 +33,7 @@ gulp.task('browser-sync', function() { // Создаем таск browser-sync
 });
 
 gulp.task('scripts', function() {
-  return gulp.src([ // Берем все необходимые библиотеки		
+  return gulp.src([                           // Берем все необходимые библиотеки		
     'src/libs/swiper/swiper-bundle.min.js'
 		])
 		.pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
@@ -46,8 +46,11 @@ gulp.task('code', function() {
 	.pipe(browserSync.reload({ stream: true }))
 });
 
-gulp.task('css-libs', function() {
-	return gulp.src('src/sass/libs.scss') // Выбираем файл для минификации
+
+gulp.task('css-min', function() {
+	return gulp.src(
+    'src/sass/style.scss'
+    ) // Выбираем файл для минификации
 		.pipe(sass()) // Преобразуем Sass в CSS посредством gulp-sass
 		.pipe(cssnano()) // Сжимаем
 		.pipe(rename({suffix: '.min'})) // Добавляем суффикс .min
@@ -71,9 +74,8 @@ gulp.task('img', function() {
 
 gulp.task('prebuild', async function() {
 
-	var buildCss = gulp.src([ // Переносим библиотеки в продакшен
+	var buildCss = gulp.src([ // Переносим css в продакшен
 		'src/css/style.css',
-		'src/css/libs.min.css'
 		])
 	.pipe(gulp.dest('dist/css'))
 
@@ -95,7 +97,9 @@ gulp.task('clear', function (callback) {
 gulp.task('watch', function() {
 	gulp.watch('src/sass/**/*.scss', gulp.parallel('sass')); // Наблюдение за sass файлами
 	gulp.watch('src/*.html', gulp.parallel('code')); // Наблюдение за HTML файлами в корне проекта
-	gulp.watch(['src/js/main.js', 'src/libs/**/*.js'], gulp.parallel('scripts')); // Наблюдение за главным JS файлом и за библиотеками
+  gulp.watch(['src/**/*.js'], gulp.parallel('scripts')); //смотрим за скриптами
+  
 });
-gulp.task('default', gulp.parallel('css-libs', 'sass', 'scripts', 'browser-sync', 'watch'));
+
+gulp.task('default', gulp.parallel('css-min', 'sass', 'scripts', 'browser-sync', 'watch'));
 gulp.task('build', gulp.parallel('prebuild', 'clean', 'img', 'sass', 'scripts'));

@@ -1,3 +1,5 @@
+@import '../libs/swiper/swiper-bundle.min.css';
+
 $playfairDisplay: 'Playfair Display';
 $openSans: 'Open Sans';
 $myriadPro: 'Myriad Pro';
@@ -276,13 +278,14 @@ $orange: rgb(228, 159, 72);
   color: white;
   width: 80px;
 }
-.swiper-container {
+
+.swiper-container1 {
   position: relative;
   max-width: 100%;
   max-height: 100%;
 }
 
-.swiper-slide {
+.swiper-slide-header {
   max-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -346,10 +349,7 @@ $orange: rgb(228, 159, 72);
     cursor: pointer;
   }
 }
-.swiper-wrapper {
-  max-height: 100%;
-  overflow: hidden;
-}
+
 
 .header__right {
   width: 5%;
@@ -395,6 +395,11 @@ $orange: rgb(228, 159, 72);
   }
 }
 @media (max-width: 992px) {
+  .header {
+    padding-top: 65px;
+    background-position: center;
+    background-size: cover;
+  }
   .logo {
     margin-left: 50px;
   }
@@ -460,32 +465,44 @@ $orange: rgb(228, 159, 72);
   }
 }
 @media (max-width: 768px) {
-  .swiper-slide {
+  .swiper-slide-header {
     max-width: 100%;
     h1 {
       font-size: 50px;
+      margin-bottom: 20px;
     }
     p {
       margin-bottom: 30px;
     }
     button {
-      padding: 15px 20px;
+      padding: 20px 60px;
     }
   }
 }
 @media (max-width: 576px) {
-    .swiper-slide {
+    .swiper-slide-header {
     max-width: 100%;
     h1 {
       font-size: 40px;
+      line-height: 40px;
+      white-space: pre-wrap;
+      max-width: 70%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    h3 {
+      margin-bottom: 20px;
     }
     p {
+      text-align: center;
+      max-width: 90%;
       margin-bottom: 30px;
     }
     button {
-      padding: 15px 20px;
+      padding: 20px 50px;
     }
   }
+  
   .burger-menu {
     display: flex;
     flex-direction: column;
@@ -495,10 +512,28 @@ $orange: rgb(228, 159, 72);
   }
 }
 @media (max-width: 400px) {
-  .swiper-slide {
+  .swiper-slide-header {
     h1 {
       font-size: 30px;
-      max-width: 100%;
+      line-height: 30px;
+      max-width: 70%;
+      white-space: pre-wrap;
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (max-width: 325px) {
+  .swiper-slide-header {
+    h1 {
+      font-size: 25px;
+      max-width: 95%;
+      white-space: pre-wrap;
+      max-width: 70%;
+      margin: 0 auto;
+      margin-bottom: 20px;
     }
   }
 }
@@ -643,11 +678,11 @@ $orange: rgb(228, 159, 72);
   }
   .about-us--title {
     margin: 0;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
   .about-us--description {
     text-align: center;
-    max-width: 70%;
+    max-width: 95%;
     margin: 0;
     margin-bottom: 30px;
   }
@@ -705,9 +740,219 @@ $orange: rgb(228, 159, 72);
 
 @media(max-width: 576px) {
   .about-us--description {
-    width: 80%;
+    width: 95%;
+    font-size: 14px;
+    line-height: 16px;
   }
   .advantages--item {
     width: 70%;
   }
 }
+// about us end
+
+.study {
+  
+  padding: 150px 0;
+  background-color: rgb(244, 244, 244);
+  
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &--title {
+    font-family: $playfairDisplay;
+    font-size: 70px;
+    font-weight: 400;
+  }
+
+}
+.study__swiper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.swiper-container2 {
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.swiper-slide-study {
+  max-height: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  transition: all 0.6s ease-in-out;
+  flex-basis: 30%;
+}
+
+.button-next, .button-prev {
+  display: none;
+}
+
+.study--slide--img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0;
+  margin-bottom: 30px;
+  width: 300px;
+  height: 350px;
+}
+.study--slide--title {
+  font-family: $playfairDisplay;
+  font-size: 22px;
+  line-height: 30px;
+  margin: 0;
+  margin-bottom: 20px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  white-space: nowrap;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 2px;
+    background-color: $orange;
+    margin-top: 20px;
+  }
+}
+.study--slide--description {
+  max-width: 95%;
+  text-align: center;
+  font-family: $openSans;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+
+@media (max-width: 1200px) {
+  .study {
+    padding: 70px 0;
+
+    &--title {
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+  }
+
+  .study--slide--img {
+    width: 250px;
+    height: 300px;
+  }
+  .study--slide--title {
+    max-width: 100%;
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .study--slide--description {
+    font-size: 14px;
+    line-height: 21px;
+    margin: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .swiper-container2 {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+
+  }
+
+  .button-next, .button-prev {
+    display: inline-block;
+    margin: 10px;
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  
+  
+  .button-next, .button-prev {
+    transform: translateY(-100%);
+    cursor: pointer;
+  }
+
+  .swiper-slide-study {
+    max-height: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    transition: all 0.6s ease-in-out;
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .study {
+    padding: 40px 0;
+
+    &--title {
+      padding-bottom: 20px;
+      font-size: 50px;
+    }
+  }
+  
+  .study--slide--title {
+      font-size: 18px;
+      line-height: 24px;
+      max-width: 100%;
+  }
+  .study--slide--description {
+    font-size: 13px;
+    line-height: 20px;
+    max-width: 90%;      
+  }
+  .study--slide--img {
+    width: 200px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  .study {
+    padding: 30px 0;
+
+    &--title {
+      padding-bottom: 20px;
+      font-size: 50px;
+    }
+  }
+  .swiper-slide-study {
+    max-width: 210px;
+  }
+
+  .study--slide--title {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .study--slide--description {
+    font-size: 13px;
+    line-height: 18px;
+  }
+  .study--slide--img {
+    width: 200px;
+    height: 250px;
+  }
+}
+
+

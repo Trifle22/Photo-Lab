@@ -1,25 +1,24 @@
-
 let slideIndex = 1;
+
 const burgerButton = document.querySelector('.menu-btn');
 const burgerMenu = document.querySelector('.burger-menu');
-console.log(burgerMenu);
 const aboutUsText = document.querySelector('.about-us--text');
 const aboutUsImg = document.querySelector('.about-us--img');
 const aboutUsAdvantages = document.querySelector('.about-us--advantages');
+const btnPrev = document.querySelector('.button-prev');
+const btnNext = document.querySelector('.button-next');
+
 
 showSlides(slideIndex);
-
 
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
-
 function showSlides(n) {
   let i;
-  let slides = document.getElementsByClassName("swiper-slide");
+  let slides = document.getElementsByClassName("swiper-slide-header");
   let paginationButtons = document.querySelectorAll('.pagination--button');
-  console.log(paginationButtons);
 
   if (n > slides.length) {
     slideIndex = 1;
@@ -64,3 +63,34 @@ burgerButton.addEventListener('click', function() {
   adaptive();
 
 
+
+
+  let slideIndex2 = 1;
+
+  showSlides2(slideIndex2);
+
+  function plusSlides(l) {
+    showSlides2(slideIndex2 += l);
+  }
+
+  function currentSlide2(l) {
+    showSlides2(slideIndex2 = l);
+  }
+
+  function showSlides2(l) {
+    let i ;
+    let slides = document.getElementsByClassName("swiper-slide-study");
+
+    if (l > slides.length) {
+      slideIndex2 = 1;
+    }
+    if (l < 1) {
+      slideIndex2 = slides.length;
+    }
+
+    for (let i = 0; i < slides.length; i++ ) {
+      slides[i].style.display = 'none';
+    }
+
+    slides[slideIndex2 - 1].style.display = 'flex';
+  }
