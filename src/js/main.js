@@ -63,34 +63,4 @@ burgerButton.addEventListener('click', function() {
   adaptive();
 
 
-
-
-  let slideIndex2 = 1;
-
-  showSlides2(slideIndex2);
-
-  function plusSlides(l) {
-    showSlides2(slideIndex2 += l);
-  }
-
-  function currentSlide2(l) {
-    showSlides2(slideIndex2 = l);
-  }
-
-  function showSlides2(l) {
-    let i ;
-    let slides = document.getElementsByClassName("swiper-slide-study");
-
-    if (l > slides.length) {
-      slideIndex2 = 1;
-    }
-    if (l < 1) {
-      slideIndex2 = slides.length;
-    }
-
-    for (let i = 0; i < slides.length; i++ ) {
-      slides[i].style.display = 'none';
-    }
-
-    slides[slideIndex2 - 1].style.display = 'flex';
-  }
+  let slider = multiItemSlider('.slider');

@@ -33,12 +33,12 @@ gulp.task('browser-sync', function() { // Создаем таск browser-sync
 });
 
 gulp.task('scripts', function() {
-  return gulp.src([                           // Берем все необходимые библиотеки		
-    'src/libs/swiper/swiper-bundle.min.js'
+  return gulp.src([    // Берем все необходимые файлы		
+    'src/libs/**/*.js',
 		])
 		.pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
 		.pipe(uglify()) // Сжимаем JS файл
-		.pipe(gulp.dest('src/js')); // Выгружаем в папку src/js
+    .pipe(gulp.dest('src/js'))  // выгружаем
 });
 
 gulp.task('code', function() {

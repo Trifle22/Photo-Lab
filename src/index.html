@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="libs/chiefSlider/chiefSlider.css">
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/main.js" defer></script>
   <link rel="shortcut icon" href="img/logo.png">
   <title>Photo Lab</title>
 </head>
@@ -126,39 +126,46 @@
       <div class="study__content">
         <h1 class="study--title">Обучение</h1>
         <div class="study__swiper">
-          <div class="button-prev" >
-            <img src="img/arrow-left.svg" alt="arrow-left">
-          </div>
-          <div class="swiper-container2">
-            <div class="swiper-slide-study fade">
-              <img src="img//study-imgs/1.png" alt="man" class="study--slide--img">
-              <h2 class="study--slide--title">Студийная съёмка</h2>
-              <p class="study--slide--description">
-                Курс профессиональной студийной съёмки. Готовит квалифицированных специалистов современной фотоиндустрии. Теория, практикав различных студиях и на пленэре. Создание портфолио.
-              </p>
+          <div class="slider">
+            <div class="slider__wrapper">
+              <div class="slider__item">
+                <div class="swiper-slide-study">
+                  <img src="img//study-imgs/1.png" alt="man" class="study--slide--img">
+                  <h2 class="study--slide--title">Студийная съёмка</h2>
+                  <p class="study--slide--description">
+                    Курс профессиональной студийной съёмки. Готовит квалифицированных специалистов современной фотоиндустрии. Теория, практикав различных студиях и на пленэре. Создание портфолио.
+                  </p>
+                </div>
+              </div>
+              <div class="slider__item">
+                <div class="swiper-slide-study">
+                  <img src="img//study-imgs/2.png" alt="man" class="study--slide--img">
+                  <h2 class="study--slide--title">Основы фотографии</h2>
+                  <p class="study--slide--description">
+                    Полный курс фотографии для начинающих. Режимы съёмки, работа со светом, цветовосприятие, студийная и выездная прктика, обработка, композиция. Регулярные домашние задания.
+                  </p>
+                </div>
+              </div>
+              <div class="slider__item">
+                <div class="swiper-slide-study">
+                  <img src="img//study-imgs/3.png" alt="man" class="study--slide--img">
+                  <h2 class="study--slide--title">Портретная фотография</h2>
+                  <p class="study--slide--description">
+                    Авторский курс Марго Овчаренко. Технология и сила интимного портрета. Актуальные тенденции и современный язык, основанные на классической традиции портретной фотографии.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="swiper-slide-study fade">
-              <img src="img//study-imgs/2.png" alt="man" class="study--slide--img">
-              <h2 class="study--slide--title">Основы фотографии</h2>
-              <p class="study--slide--description">
-                Полный курс фотографии для начинающих. Режимы съёмки, работа со светом, цветовосприятие, студийная и выездная прктика, обработка, композиция. Регулярные домашние задания.
-              </p>
-            </div><div class="swiper-slide-study fade">
-              <img src="img//study-imgs/3.png" alt="man" class="study--slide--img">
-              <h2 class="study--slide--title">Портретная фотография</h2>
-              <p class="study--slide--description">
-                Авторский курс Марго Овчаренко. Технология и сила интимного портрета. Актуальные тенденции и современный язык, основанные на классической традиции портретной фотографии
-              </p>
-            </div>
-          </div>
-          <div class="button-next" >
-            <img src="img/arrow-right.svg" alt="arrow-right">
+            <a class="slider__control slider__control_left" href="#" role="button"></a>
+            <a class="slider__control slider__control_right slider__control_show" href="#" role="button"></a>
           </div>
         </div>
       </div>
     </div>
   </section>
   <!-- /.study -->
+  <script src="js/libs.min.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
 
