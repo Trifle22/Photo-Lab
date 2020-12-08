@@ -1029,9 +1029,13 @@ $orange: rgb(228, 159, 72);
     margin-bottom: 20px;
     height: 250px;
     max-height: 250px;
+    object-fit: cover;
   }
 
 @media (max-width: 768px) {
+  .student-work {
+    padding: 100px 0;
+  }
   .student-work--nav {
     display: none;
   }
@@ -1099,11 +1103,43 @@ $orange: rgb(228, 159, 72);
 
 @media (max-width: 992px) {
   .student-work__img {
-    width: 45%;
-    max-width: 45%;
+    width: 49%;
+    max-width: 49%;
     height: 150px;
     max-height: 150px;
   }
 }
-  
 
+
+.reviews-questions {
+  background-color: rgb(244, 244, 244);
+  padding: 100px 0;
+
+  &__content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+  .reviews {
+    
+  }
+  .review {
+  }
+  .review-text {
+  }
+  .review-author {
+  }
+  .author-photo {
+  }
+  .about-author {
+  }
+  .author-name {
+  }
+  .author-status {
+  }
+  .review-hearts {
+  }
+  
