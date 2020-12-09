@@ -1123,23 +1123,96 @@ $orange: rgb(228, 159, 72);
   }
 }
 
-  .reviews {
-    
+.reviews {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-basis: 45%;
+  padding-left: 50px;
+  background-color: white;
+}
+.review {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 30px 0;
+  background-color: white;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+}
+.review-text {
+  width: 90%;
+  max-width: 90%;
+  font-family: $openSans;
+  font-size: 14px;
+  line-height: 20px;
+  color: black;
+  margin: 0;
+  margin-bottom: 20px;
+}
+.review-author {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 95%;
+  max-width: 100%;
+}
+.author-photo {
+  width: 80px;
+  height: 80px;
+  max-height: 80px;
+  max-width: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+.about-author {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+.author-name {
+  font-family: $openSans;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+}
+.author-status {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  &--text {
+    font-size: 14px;
+    font-family: $openSans;
+    line-height: 30px;
+    margin: 0;
   }
-  .review {
+}
+.review-hearts {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 0;
+  margin-right: 50px;
+
+  .fa-heart {
+    color: rgb(244, 244, 244);
+    margin: 2px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      color: $orange;
+    }
+    &.active {
+      color: $orange;
+    }
   }
-  .review-text {
-  }
-  .review-author {
-  }
-  .author-photo {
-  }
-  .about-author {
-  }
-  .author-name {
-  }
-  .author-status {
-  }
-  .review-hearts {
-  }
+}
+
   
