@@ -4,6 +4,9 @@ $openSans: 'Open Sans';
 $myriadPro: 'Myriad Pro';
 $orange: rgb(228, 159, 72);
 
+a {
+  cursor: pointer;
+}
 
 @font-face {
   font-family: 'Open Sans';
@@ -1434,4 +1437,251 @@ $orange: rgb(228, 159, 72);
 }
 
 
+.footer {
+  background-color: rgb(18, 17, 16);
+
+  
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 100px 0;
+    border-bottom: 1px solid white;
+  }
+  
+    &__contacts__links {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  
+    &__contacts {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-top: -10px;
+      margin-right: 50px;
+    }
+    
+    
+    &__contacts--title {
+      font-family: $openSans;
+      font-size: 18px;
+      line-height: 14px;
+      color: white;
+      margin-bottom: 0;
+    }
+    
+    
+    &__contacts--adress {
+      font-family: $myriadPro;
+      font-size: 15px;
+      line-height: 22px;
+      color: rgb(146, 143, 143);
+      max-width: 200px;
+      letter-spacing: 0.05em;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      text-decoration: none;
+    }
+    
+    
+    &__contacts--tel {
+      font-family: $myriadPro;
+      font-size: 15px;
+      line-height: 22px;
+      color: white;
+      max-width: 200px;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      margin-bottom: 5px;
+    }
+    
+    
+    &__contacts--email {
+      font-family: $myriadPro;
+      font-size: 15px;
+      line-height: 22px;
+      color: white;
+      max-width: 200px;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+    }
+    
+  
+  
+  &__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: -10px;
+  }
+  
+  
+  &__links--title {
+    font-family: $openSans;
+    font-size: 18px;
+    line-height: 14px;
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  
+  &__links--link {
+    text-decoration: none;
+    font-family: $openSans;
+    font-size: 15px;
+    line-height: 21px;
+    color: rgb(146, 143, 143);
+  }
+  
+  
+  &__subscribe {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: -10px;
+
+  }
+  
+  
+  &__subscribe--title {
+    font-family: $openSans;
+    font-size: 18px;
+    line-height: 14px;
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  
+  &__subscribe--input {
+    background-color: transparent;
+    padding: 15px 0;
+    padding-left: 15px;
+    border-radius: 22px;
+    outline: none;
+    min-width: 250px;
+    border: 1px solid white;
+    margin-bottom: 20px;
+    color: white;
+    letter-spacing: 0.08em;
+    &::placeholder {
+      color: white;
+      letter-spacing: 0.08em;
+    }
+  }
+  
+  
+  &__subscribe--button {
+    color: #242424;
+    background-color: $orange;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-family: $openSans;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 20px 0;
+    min-width: 200px;
+    text-align: center;
+    border-radius: 22px;
+  }
+}
+
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+  background-color: rgb(18, 17, 16);
+  
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  &__links {
+    display: flex;
+    align-items: center;
+
+    &--link {
+      font-size: 20px;
+      text-decoration: none;
+      color: white;
+      margin: 15px;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        color: $orange;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  
+  
+
+  }
+  .copyright--text {
+    font-family: $openSans;
+    font-size: 15px;
+    color: rgb(146, 143, 143);
+
+    .symbol {
+      color: white;
+    }
+
+  }
+
+@media (max-width: 992px) {
+  .footer__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: none;
+
+    .logo {
+      margin-left: 0;
+      margin-bottom: 20px;
+    }
+  }
+  .footer {
+    border-bottom: 1px solid white;
+    width: 100%;
+
+    &__contacts__links {
+      order: 4;
+    }
+
+    &__contacts {
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+    &__subscribe {
+      align-items: center;
+      margin-bottom: 40px;
+    }
+    &__subscribe--button {
+      font-size: 15px;
+    }
+    &__links {
+      align-items: flex-start;
+    }
+  }
+  .copyright {
+    padding: 10px 0;
+  }
+  .copyright__content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .copyright--text {
+    order: 3;
+  }
+}
   

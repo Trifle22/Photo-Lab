@@ -11,7 +11,7 @@
   <title>Photo Lab</title>
 </head>
 <body>
-  <header class="header">
+  <header class="header" id="main">
     <div class="header__center--top">
       <div class="menu-btn">
         <span></span>
@@ -22,12 +22,12 @@
         lab
       </a>
       <nav class="header--nav">
-        <a href="#" class="header--nav--link">Главная</a>
-        <a href="#" class="header--nav--link">О нас</a>
-        <a href="#" class="header--nav--link">Обучение</a>
-        <a href="#" class="header--nav--link">Портфолио</a>
-        <a href="#" class="header--nav--link">Отзывы</a>
-        <a href="#" class="header--nav--link">Контакты</a>
+        <a href="#main" class="header--nav--link">Главная</a>
+        <a href="#about-us" class="header--nav--link">О нас</a>
+        <a href="#study" class="header--nav--link">Обучение</a>
+        <a href="#works" class="header--nav--link">Портфолио</a>
+        <a href="#reviews" class="header--nav--link">Отзывы</a>
+        <a href="#contacts" class="header--nav--link">Контакты</a>
       </nav>
       <div class="header__search--block">
         <input type="text" class="search--block--input">
@@ -35,12 +35,12 @@
       </div>
     </div>
     <nav class="burger-menu">
-      <a href="#" class="header--nav--link">Главная</a>
-      <a href="#" class="header--nav--link">О нас</a>
-      <a href="#" class="header--nav--link">Обучение</a>
-      <a href="#" class="header--nav--link">Портфолио</a>
-      <a href="#" class="header--nav--link">Отзывы</a>
-      <a href="#" class="header--nav--link">Контакты</a>
+      <a href="#main" class="header--nav--link">Главная</a>
+      <a href="#about-us" class="header--nav--link">О нас</a>
+      <a href="#study" class="header--nav--link">Обучение</a>
+      <a href="#works" class="header--nav--link">Портфолио</a>
+      <a href="#reviews" class="header--nav--link">Отзывы</a>
+      <a href="#contacts" class="header--nav--link">Контакты</a>
     </nav>
     <div class="header__bottom">
       <aside class="header__left">
@@ -93,7 +93,7 @@
       </aside>
     </div>
   </header>
-  <section class="about-us">
+  <section class="about-us" id="about-us">
     <div class="container">
       <div class="about-us__content">
         <div class="about-us--text">
@@ -121,10 +121,10 @@
       </div>
     </div>
   </section>
-  <section class="study">
+  <section class="study" >
     <div class="container">
       <div class="study__content">
-        <h1 class="study--title">Обучение</h1>
+        <h1 class="study--title" id="study">Обучение</h1>
           <div class="slider">
             <div class="slider__wrapper">
               <div class="slider__item">
@@ -164,7 +164,7 @@
     <!-- ./container -->
   </section>
   <!-- /.study -->
-  <section class="student-work">
+  <section class="student-work" id="works">
     <div class="container">
       <div class="student-work__content">
         <h1 class="student-work--title">Работы студентов</h1>
@@ -232,7 +232,7 @@
     <!-- /.container -->
   </section>
   <!-- /.student-work -->
-  <section class="reviews-questions">
+  <section class="reviews-questions" id="reviews">
     <div class="container">
       <div class="reviews-questions__content">
         <div class="reviews">
@@ -323,7 +323,59 @@
     </div>
     <!-- ./container -->
   </section>
-  <!-- /.reviews -->
+  <!-- /.reviews-questions -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <a href="#" class="logo">
+          photo
+          <img src="img/logo.png" alt="logo" class="logo-img">
+          lab
+        </a>
+        <div class="footer__contacts__links" id="contacts">
+          <div class="footer__contacts">
+            <h3 class="footer__contacts--title">Контакты</h3>
+            <a href="https://yandex.ru/maps/-/CCUENBHagB" target="_blank" class="footer__contacts--adress">г.Москва, ул. Ленина 134, офис 123</a>
+            <a href="tel:88001234567" class="footer__contacts--tel">8 800 123 45 67</a>
+            <a href="mailto:info@llama.com" class="footer__contacts--email">info@llama.com</a>
+          </div>
+          <!-- /.contacts -->
+          <div class="footer__links">
+            <h3 class="footer__links--title">Ссылки</h3>
+            <a href="#main" class="footer__links--link">Главная</a>
+            <a href="#about-us" class="footer__links--link">О нас</a>
+            <a href="#study" class="footer__links--link">Обучение</a>
+            <a href="#works" class="footer__links--link">Портфолио</a>
+            <a href="#reviews" class="footer__links--link">Отзывы</a>
+          </div>
+        </div>
+        <div class="footer__subscribe">
+          <h3 class="footer__subscribe--title">Подписаться на новости</h3>
+          <input type="text" class="footer__subscribe--input" placeholder="Ваш E-mail">
+          <button class="footer__subscribe--button">Подписаться</button>
+        </div>
+        <!-- /.footer__subscribe -->
+      </div>
+
+    </div>
+    <!-- /.container -->
+  </footer>
+  <div class="copyright">
+    <div class="container">
+      <div class="copyright__content">
+        <p class="copyright--text">
+          <span class="symbol">©</span> Копирайтинг 2020 год.
+        </p>
+        <div class="copyright__links">
+          <a href="#" class="copyright__links--link"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="copyright__links--link"><i class="fab fa-vk"></i></a>
+          <a href="#" class="copyright__links--link"><i class="fab fa-telegram-plane"></i></a>
+          <a href="#" class="copyright__links--link"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <!-- /.copyright__content -->
+    </div>
+  </div>
   <script src="js/libs.min.js" defer></script>
   <script src="js/main.js" defer></script>
 </body>

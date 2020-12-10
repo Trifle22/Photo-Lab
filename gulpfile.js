@@ -57,6 +57,8 @@ gulp.task('css-min', function() {
 		.pipe(gulp.dest('src/css')); // Выгружаем в папку src/css
 });
 
+
+
 gulp.task('clean', async function() {
 	return del.sync('dist'); // Удаляем папку dist перед сборкой
 });
@@ -75,16 +77,18 @@ gulp.task('img', function() {
 gulp.task('prebuild', async function() {
 
 	var buildCss = gulp.src([ // Переносим css в продакшен
-		'src/css/style.css',
-		])
-	.pipe(gulp.dest('dist/css'))
+    'src/css/style.css',
+    'src/css/normalize.css',
+    ]).pipe(cssnano()).pipe(gulp.dest('dist/css'))
+
+  var buildLibs = gulp.src(['src/libs/**/*.css']).pipe(cssnano()).pipe(gulp.dest('dist/libs'))
 
 	var buildFonts = gulp.src('src/fonts/**/*') // Переносим шрифты в продакшен
 	.pipe(gulp.dest('dist/fonts'))
 
 	var buildJs = gulp.src('src/js/**/*') // Переносим скрипты в продакшен
-	.pipe(gulp.dest('dist/js'))
-
+  .pipe(gulp.dest('dist/js'))
+  
 	var buildHtml = gulp.src('src/*.html') // Переносим HTML в продакшен
 	.pipe(gulp.dest('dist'));
 

@@ -10,6 +10,9 @@ const btnNext = document.querySelector('.button-next');
 const studentWorkDropdown = document.querySelector('.student-work--dropdown');
 const likes = document.querySelectorAll('.fa-heart');
 const likesArray = Array.prototype.slice.call(likes);
+const headerNavLink = document.querySelectorAll('.header--nav--link');
+const anchors = document.querySelectorAll('a[href*="#"]');
+
 
 showSlides(slideIndex);
 
@@ -138,3 +141,24 @@ likesArray.forEach(item =>
   item.parentNode.dataset.totalValue = value;
   })
 );
+
+
+for (let anchor of anchors) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault()
+    
+    const blockID = anchor.getAttribute('href').substr(1)
+    
+    document.getElementById(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  })
+}
+
+headerNavLink.forEach(item => {
+  item.addEventListener('click', function() {
+    burgerButton.classList.toggle('active');
+    burgerMenu.classList.toggle('active');
+  })
+});

@@ -19,6 +19,8 @@ let multiItemSlider = (function () {
       _items.push({ item: item, position: index, transform: 0 });
     });
 
+
+
     let position = {
       getMin: 0,
       getMax: _items.length - 1,
