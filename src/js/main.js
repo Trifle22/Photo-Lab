@@ -8,7 +8,8 @@ const aboutUsAdvantages = document.querySelector('.about-us--advantages');
 const btnPrev = document.querySelector('.button-prev');
 const btnNext = document.querySelector('.button-next');
 const studentWorkDropdown = document.querySelector('.student-work--dropdown');
-
+const likes = document.querySelectorAll('.fa-heart');
+const likesArray = Array.prototype.slice.call(likes);
 
 showSlides(slideIndex);
 
@@ -130,3 +131,10 @@ let dropdownTabs = function() {
 }
 
 dropdownTabs();
+
+likesArray.forEach(item => 
+  item.addEventListener('click', () => {
+    let { value } = item.dataset;
+  item.parentNode.dataset.totalValue = value;
+  })
+);
